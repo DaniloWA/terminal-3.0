@@ -30,6 +30,21 @@
   font-family: Consolas;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: rgba(0, 255, 255, 0.085);
+}
+
+::-webkit-scrollbar-thumb {
+  width: 5px;
+  border-radius: 5px;
+  background-color: aqua;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: red;
+}
+
 .container {
   background-color: #401386;
   height: 100vh;
@@ -73,11 +88,17 @@
   color: #757575;
 }
 .container .terminal #display {
+  overflow-x: hidden;
+  overflow-y: auto;
+  white-space: nowrap;
   padding: 5px;
   grid-area: tela;
 }
 .container .terminal #display p {
   margin-bottom: 3px;
+}
+.container .terminal #display ::-webkit-scrollbar {
+  width: 30px;
 }
 .container footer {
   grid-area: footer;
