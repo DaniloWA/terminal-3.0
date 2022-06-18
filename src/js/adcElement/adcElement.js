@@ -1,24 +1,23 @@
 import { getHora } from "../getHora/getHora.js";
 import { getInputValue, displayDiv } from "../getDados/getDados.js";
 
-export function adcElemento(exec,txt){
+export function adcElemento(status,txt){
     let dados = getInputValue()
     let linha = document.createElement("p")
     let horaSpan = document.createElement("span")
+    let statusCode = ['green','error','warn']
+    horaSpan.className = 'time_text' 
+    horaSpan.textContent = getHora() +': '
 
-    if(exec){
-        horaSpan.className = 'time_text' 
-        horaSpan.textContent = getHora() +': '
+    statusCode.forEach((stcode, key) => {
+        if(stcode == status){
+            linha.className = `row ${status}_text`
+        }
+    });
+    
+    linha.appendChild(horaSpan)
+    linha.innerHTML += `${txt}`
 
-        linha.className = 'row green_text'
-        linha.appendChild(horaSpan)
-        linha.innerHTML += `${txt}`
-
-        return displayDiv.appendChild(linha)
-    }
-    else {
-        return
-    }
+    return displayDiv.appendChild(linha)
 }
 
-adcElemento('teste','teste')
