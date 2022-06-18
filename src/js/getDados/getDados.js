@@ -1,5 +1,5 @@
 const inputText = document.querySelector('#input_text')
-const displayDiv = document.querySelector('#display')
+export const displayDiv = document.querySelector('#display')
 
 
 inputText.addEventListener('keydown', (e) => {
@@ -8,7 +8,7 @@ inputText.addEventListener('keydown', (e) => {
     }
 })
 
-function getInputValue(){
+export function getInputValue(){
     return inputText.value.toString().toLowerCase()
 }
 
