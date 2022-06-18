@@ -1,0 +1,19 @@
+.green_text{
+    color: $text_terminal_color;
+    font-size: 12px;
+}
+.error_text{
+    color: $text_error_color;
+    font-size: 12px;
+    background-color:  rgba(61, 27, 27, 0.556);
+}
+.warn_text{
+    color: $text_warning_color;
+    background-color: rgba(242, 255, 59, 0.065);
+    font-size: 12px;
+}
+
+.time_text{
+    color: $text_input_color;
+    font-size: 12px;
+}
