@@ -23,11 +23,17 @@ export function gerarSenha() {
       }
 
       randomParametroF(){
-        for(let i = 0; i < this._vezes; i++){
-          this.randomF(this._comSem)
-          this.password += this.randomParametro[random(4,0)]
+        if(this._comSem == "com"){
+          for(let i = 0; i < this._vezes; i++){
+            this.randomF(this._comSem)
+            this.password += this.randomParametro[random(4,0)]
+          }
+        } else {
+          for(let i = 0; i < this._vezes; i++){
+            this.randomF(this._comSem)
+            this.password += this.randomParametro[random(3,0)]
+          }
         }
-        console.log(this.randomParametro[3])
         return this.password
       }
 
@@ -50,19 +56,19 @@ export function gerarSenha() {
       } 
 
       rNumero(){
-        return this.randomParametro[0] = numeros[random(10,0)]
+        return this.randomParametro[0] = numeros[random(9,0)]
       }
 
       rString(){
-        return this.randomParametro[1]= letras[random(26,0)]
+        return this.randomParametro[1]= letras[random(25,0)]
       }
 
       rStringM(){
-        return this.randomParametro[2] = letras.toUpperCase()[random(26,0)]
+        return this.randomParametro[2] = letras.toUpperCase()[random(25,0)]
       }
 
       rCaracteres(){
-        return this.randomParametro[3] = caracteresEspeciais[random(19,0)]
+        return this.randomParametro[3] = caracteresEspeciais[random(18,0)]
       }
 
     }
