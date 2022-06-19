@@ -90,7 +90,6 @@
 .container .terminal #display {
   overflow-x: hidden;
   overflow-y: auto;
-  white-space: nowrap;
   padding: 5px;
   grid-area: tela;
 }

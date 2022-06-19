@@ -38,8 +38,6 @@
     }
 
     .terminal{
-       
-
         background-color: $background_terminal_color;
         grid-area: terminal;
         width: 70%;
@@ -48,8 +46,6 @@
         border: $border_terminal_color 7px solid;
         justify-self: center;
         align-self: start;
-
-
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 10fr 10fr;
@@ -70,7 +66,6 @@
           #display{
             overflow-x: hidden;
             overflow-y: auto;
-            white-space: nowrap;
             padding: 5px;
             grid-area: tela;
             p{
