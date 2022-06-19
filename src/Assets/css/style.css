@@ -6,16 +6,20 @@
 
 .error_text {
   color: #ce0606;
-  background-color: rgba(61, 27, 27, 0.556);
+  background-color: rgba(61, 27, 27, 0.5568627451);
 }
 
 .warn_text {
   color: #b1af00;
-  background-color: rgba(242, 255, 59, 0.065);
+  background-color: rgba(242, 255, 59, 0.0666666667);
 }
 
 .time_text {
   color: #757575;
+}
+
+.user_text {
+  color: #668f6d;
 }
 
 .row {

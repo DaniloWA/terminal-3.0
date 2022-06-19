@@ -1,17 +1,23 @@
 .green_text{
     color: $text_terminal_color;
 }
+
 .error_text{
     color: $text_error_color;
-    background-color:  rgba(61, 27, 27, 0.556);
+    background-color:  $bg_text_error_color;
 }
+
 .warn_text{
     color: $text_warning_color;
-    background-color: rgba(242, 255, 59, 0.065);
+    background-color: $bg_text_warning_color;
 }
 
 .time_text{
     color: $text_input_color;
+}
+
+.user_text{
+    color: $text_user_color;
 }
 
 .row{
