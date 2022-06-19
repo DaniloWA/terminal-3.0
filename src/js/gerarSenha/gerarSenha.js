@@ -81,7 +81,8 @@ export function gerarSenha() {
       let password = novaSenha.randomParametroF()
       
       if(comSem == undefined || vezes == undefined){
-        statusCode = 'error'
+        statusCode = 'info'
+        adcElemento('error','Falta de parametros')
         password = "Experimente assim : gerar senha (n) (com ou sem) caracteres especiais"
       }
 
