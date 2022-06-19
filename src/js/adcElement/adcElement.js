@@ -6,7 +6,7 @@ export function adcElemento(status,txt){
 
     let linha = document.createElement("p")
     let horaSpan = document.createElement("span")
-    let statusCode = ['user','green','error','warn']
+    let statusCode = ['info','user','green','error','warn']
 
     horaSpan.className = 'time_text' 
     horaSpan.textContent = getHora() +': '
@@ -14,6 +14,7 @@ export function adcElemento(status,txt){
     statusCode.forEach(stcode => {
         if(stcode == status){
             linha.className = `row ${status}_text`
+            
         }
     });
     
