@@ -8,7 +8,6 @@ export function help(){
     if(rg.checkRegex(dados)){
         adcElemento('green', rg.checkRegex(dados))
     }
-
 }
 
 
