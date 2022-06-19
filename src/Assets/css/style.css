@@ -9,6 +9,11 @@
   background-color: rgba(61, 27, 27, 0.5568627451);
 }
 
+.info_text {
+  color: #74b9ff;
+  background-color: rgba(0, 204, 255, 0.1529411765);
+}
+
 .warn_text {
   color: #b1af00;
   background-color: rgba(242, 255, 59, 0.0666666667);
