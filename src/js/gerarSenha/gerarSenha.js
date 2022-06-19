@@ -88,5 +88,5 @@ export function gerarSenha() {
 
       adcElemento(statusCode,password)
     }
-  }
+}
 
