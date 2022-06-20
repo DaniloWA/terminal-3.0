@@ -1,21 +1,22 @@
-import * as calculadora from "./calculadora/calculadora.js"
-import * as getDados from "./getDados/getDados.js"
-import * as add from "./adcElement/adcElement.js"
-import * as help from "./help/help.js"
-import * as senha from "./gerarSenha/gerarSenha.js"
-import * as txt from "./analisarTexto/analisarTexto.js"
+import { respostaCalculos } from "./calculadora/calculadora.js"
+import { getInputValue,inputText } from "./getDados/getDados.js"
+import { adcElemento } from "./adcElement/adcElement.js"
+import { help } from "./help/help.js"
+import { gerarSenha } from "./gerarSenha/gerarSenha.js"
+import { analisarTexto } from "./analisarTexto/analisarTexto.js"
+import { embaralharTexto } from "./embaralhar/embaralhar.js"
 
-
-getDados.inputText.addEventListener('keydown', (e) => {
+inputText.addEventListener('keydown', (e) => {
     if(e.key == "Enter"){
+        adcElemento('user',getInputValue())
         checkComandos()
     }
 })
 
 function checkComandos(){
-    add.adcElemento('user',getDados.getInputValue())
-    calculadora.respostaCalculos()
-    help.help()
-    senha.gerarSenha()
-    txt.analisarTexto()
+    respostaCalculos()
+    help()
+    gerarSenha()
+    analisarTexto()
+    embaralharTexto()
 }
