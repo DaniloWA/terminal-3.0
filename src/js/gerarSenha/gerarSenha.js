@@ -82,7 +82,7 @@ export function gerarSenha() {
       
       if(comSem == undefined || vezes == undefined){
         statusCode = 'info'
-        adcElemento('error','Falta de parametros')
+        adcElemento('error','Error: Falta de parametros')
         password = "Experimente assim : gerar senha (n) (com ou sem) caracteres especiais"
       }
 

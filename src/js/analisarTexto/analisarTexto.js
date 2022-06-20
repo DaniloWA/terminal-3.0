@@ -10,7 +10,7 @@ export function analisarTexto(){
         if(analisarTxt().exec(dados).input.length < 15){
             string =`Experimenta: Analisar texto [seu texto]` 
             statusCode = 'info'
-            adcElemento('error','Falta de parametros')
+            adcElemento('error','Error: Falta de parametros')
         } else {
 
             let numPalavras = dados.match(contaPalavras()).length -1 // o -1 elimina o Analisar texto da equação
