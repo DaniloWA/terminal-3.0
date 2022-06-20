@@ -8,19 +8,33 @@ export function adcElemento(status,txt){
     let horaSpan = document.createElement("span")
     let statusCode = ['info','user','green','error','warn']
 
-    horaSpan.className = 'time_text' 
-    horaSpan.textContent = getHora() +': '
+    if(!dados.length == 0){
+        horaSpan.className = 'time_text' 
+        horaSpan.textContent = getHora() +': '
 
-    statusCode.forEach(stcode => {
-        if(stcode == status){
-            linha.className = `row ${status}_text`
-            
-        }
-    });
+        statusCode.forEach(stcode => {
+            if(stcode == status){
+                linha.className = `row ${status}_text`
+                
+            }
+        });
+        
+        linha.appendChild(horaSpan)
+        linha.innerHTML += `${txt}`
+
+        return displayDiv.appendChild(linha)
+
+    } else {
+        horaSpan.className = 'time_text' 
+        horaSpan.textContent = getHora() +': '
+
+
+        linha.className = `row warn_text`   
+        linha.appendChild(horaSpan)
+        linha.innerHTML += "Perdido ? escreva 'help' no terminal"
+        
+        return displayDiv.appendChild(linha)
+    }
     
-    linha.appendChild(horaSpan)
-    linha.innerHTML += `${txt}`
-
-    return displayDiv.appendChild(linha)
 }
 
