@@ -20,8 +20,8 @@ export function analisarTexto(){
             statusCode = 'green'
         }
 
-        return adcElemento(statusCode,string)
+        return [true, adcElemento(statusCode,string)]
     } else {
-        return
+        return false
     }
 }

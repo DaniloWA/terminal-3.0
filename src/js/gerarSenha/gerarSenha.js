@@ -86,7 +86,9 @@ export function gerarSenha() {
         password = "Experimente assim : gerar senha (n) (com ou sem) caracteres especiais"
       }
 
-      adcElemento(statusCode,password)
+      return [true, adcElemento(statusCode,password)]
+    } else {
+      return false
     }
 }
 

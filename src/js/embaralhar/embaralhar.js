@@ -15,16 +15,16 @@ export function embaralharTexto(){
             string =`Experimenta: Embaralhar texto [seu texto]` 
             statusCode = 'info'
             adcElemento('error','Error: Falta de parametros')
-
+            
         } else {
 
             dadosLimpos = dados.replace(regexEmbaralharTexto(), '' )
             string = dadosLimpos.split('').sort(function(){return 0.5-Math.random()}).join('');
             
         }
-        return adcElemento(statusCode,string)
+        return[true, adcElemento(statusCode,string)]
     } else {
-        return
+        return false
     }
  
 }

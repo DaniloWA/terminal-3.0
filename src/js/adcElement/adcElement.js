@@ -1,14 +1,14 @@
 import { getHora } from "../getHora/getHora.js";
 import { getInputValue, displayDiv } from "../getDados/getDados.js";
 
-export function adcElemento(status,txt){
+export function adcElemento(status,txt,comando){
     let dados = getInputValue()
 
     let linha = document.createElement("p")
     let horaSpan = document.createElement("span")
     let statusCode = ['info','user','green','error','warn']
 
-    if(!dados.length == 0){
+    if(!dados.length == 0 || comando){
         horaSpan.className = 'time_text' 
         horaSpan.textContent = getHora() +': '
 
@@ -24,7 +24,7 @@ export function adcElemento(status,txt){
 
         return displayDiv.appendChild(linha)
 
-    } else {
+    } else if (!comando){
         horaSpan.className = 'time_text' 
         horaSpan.textContent = getHora() +': '
 

@@ -58,8 +58,8 @@ export function respostaCalculos(){
 
         respostaFinal = calculos(num1,num2,operadoresIA(operadore))
 
-        return adcElemento('green',respostaFinal)
+        return [true, adcElemento('green',respostaFinal)]
    } else {
-    return
+        return false
    }
 }
