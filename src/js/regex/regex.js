@@ -31,3 +31,9 @@ export function regexEmbaralharTexto() {
     let regExp = /embaralhar texto/i
     return regExp
 }
+
+// Gerar destino
+export function regexGerarDestino() {
+    let regExp = /gerar destino/i
+    return regExp
+    }
