@@ -1,54 +1,54 @@
-export function regexHelp() {
+ function regexHelp() {
     let regExp = /^help/i
     return regExp
 }
 
-export function rgHelpList(){
+ function rgHelpList(){
     let regExp = /^help list/i
     return regExp
 }
 
-export function rgHelpAnalisar(){
+ function rgHelpAnalisar(){
     let regExp = /^Help Analisar/i
     return regExp
 }
 
-export function rgHelpCacluladora(){
+ function rgHelpCacluladora(){
     let regExp = /^Help Calculadora/i
     return regExp
 }
 
-export function rgHelpEmbaralhar(){
+ function rgHelpEmbaralhar(){
     let regExp = /^Help Embaralhar/i
     return regExp
 }
 
-export function rgHelpDestino(){
+ function rgHelpDestino(){
     let regExp = /^Help Destino/i
     return regExp
 }
 
-export function rgHelpEmail(){
+ function rgHelpEmail(){
     let regExp = /^Help Email/i
     return regExp
 }
 
-export function rgHelpNomes(){
+ function rgHelpNomes(){
     let regExp = /^Help Nomes/i
     return regExp
 }
 
-export function rgHelpNumeros(){
+ function rgHelpNumeros(){
     let regExp = /^Help numeros'/i
     return regExp
 }
 
-export function rgHelpSenha(){
+ function rgHelpSenha(){
     let regExp = /^Help senha/i
     return regExp
 }
 
-export function rgHelpTexto(){
+ function rgHelpTexto(){
     let regExp = /^Help inverter/i
     return regExp
 }
@@ -56,7 +56,7 @@ export function rgHelpTexto(){
 
 export function checkRegex(dados){
     if(rgHelpList().exec(dados)) 
-        return 'Lista de comandos, ' + 'Help Analisar, ' + 'Help Calculadora, ' + 'Help Embaralhar, ' + 'Help Destino, ' + 'Help Email, ' + 'Help Nomes, ' + 'Help numeros, ' + 'Help senha, ' + 'Help inverter'
+        return 'Lista de comandos: ' + 'Help Analisar, ' + 'Help Calculadora, ' + 'Help Embaralhar, ' + 'Help Destino, ' + 'Help Email, ' + 'Help Nomes, ' + 'Help numeros, ' + 'Help senha, ' + 'Help inverter'
 
     if(rgHelpAnalisar().exec(dados)) 
         return 'Escreva "Analisar texto (texto)" e ira retorna o numero de palavras e de letras.'
