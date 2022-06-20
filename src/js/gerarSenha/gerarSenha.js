@@ -5,7 +5,8 @@ import { adcElemento } from "../adcElement/adcElement.js"
 
 export function gerarSenha() {
     let dados = getInputValue()
-
+    if(dados.length == 0) return false
+    
     let numeros = "0123456789"
     let letras = "abcdefghijklmnopqrstuvwxyz"
     let caracteresEspeciais = "!@#$%^&*()+?><:{}[]"

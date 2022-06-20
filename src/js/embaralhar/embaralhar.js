@@ -4,7 +4,8 @@ import { adcElemento } from "../adcElement/adcElement.js"
 
 export function embaralharTexto(){
     let dados = getInputValue()
-
+    if(dados.length == 0) return false
+    
     let dadosLimpos = ''
     let string = ''
     let statusCode = 'green'

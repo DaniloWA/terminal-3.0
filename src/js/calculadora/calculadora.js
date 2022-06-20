@@ -48,6 +48,8 @@ function calculos (n1, n2, operador) {
 
 export function respostaCalculos(){
     let dados = getInputValue()
+    if(dados.length == 0) return false
+
     let dadosCalculadorRG = calculadoraRG()
     let respostaFinal = ''
 

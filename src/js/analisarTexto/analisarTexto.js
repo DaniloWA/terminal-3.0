@@ -4,8 +4,11 @@ import { adcElemento } from "../adcElement/adcElement.js"
 
 export function analisarTexto(){
     let dados = getInputValue()
+    if(dados.length == 0) return false
+    
     let string =''
     let statusCode = ''
+
     if(analisarTxt().exec(dados)){
         if(analisarTxt().exec(dados).input.length < 15){
             string =`Experimenta: Analisar texto [seu texto]` 
