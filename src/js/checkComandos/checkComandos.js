@@ -6,22 +6,23 @@ import { respostaCalculos } from "../calculadora/calculadora.js"
 import { adcElemento } from "../adcElement/adcElement.js"
 import { getInputValue } from "../getDados/getDados.js";
 import { gerarDestino } from "../gerarDestinos/gerarDestinos.js"
+import { gerarNomes } from "../gerarNomes/gerarNomes.js"
+import { gerarEmail } from "../gerarEmail/gerarEmail.js"
 
 
 export function Comandos(){
     let dados = getInputValue()
     if(dados.length == 0) return false
        
-    
-    
     checkComandos(
         respostaCalculos(),
         help(),
         gerarSenha(),
         analisarTexto(),
         embaralharTexto(),
-        gerarDestino()
-        gerarNomes()
+        gerarDestino(),
+        gerarNomes(),
+        gerarEmail()
     )
 }
 
