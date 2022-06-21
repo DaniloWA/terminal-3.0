@@ -55,3 +55,9 @@ export function regexLimparEmail(){
     return regExp1
 }
 
+
+// inverter texto
+export function regexInverterTexto() {
+    let regExp = /inverter texto/i
+    return regExp
+}
