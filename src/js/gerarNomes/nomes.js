@@ -1,0 +1,48 @@
+export const nomesMasculinos = [
+    "Vitor Hugo Alves",
+    "Yuri Dias",
+    "André da Cunha",
+    "Sr. Erick Moura",
+    "João Gabriel Nascimento",
+    "Benício da Paz",
+    "Pedro Lucas Pereira",
+    "Nathan da Luz",
+    "Thales Freitas",
+    "João Gabriel Jesus",
+]
+
+export const nomesFemininos = [
+    "Dra. Mariana Teixeira",
+    "Alexia Cardoso",
+    "Emanuella Araújo",
+    "Srta. Maria Eduarda Ferreira",
+    "Rebeca Duarte",
+    "Maria Alice Dias",
+    "Srta. Maria Sophia Fernandes",
+    "Dra. Pietra Santos",
+    "Mirella da Mata",
+    "Emilly Moura",
+]
+
+export const nomes = [
+    "Vitor Hugo Alves",
+    "Yuri Dias",
+    "André da Cunha",
+    "Sr. Erick Moura",
+    "João Gabriel Nascimento",
+    "Benício da Paz",
+    "Pedro Lucas Pereira",
+    "Nathan da Luz",
+    "Thales Freitas",
+    "João Gabriel Jesus",
+    "Dra. Mariana Teixeira",
+    "Alexia Cardoso",
+    "Emanuella Araújo",
+    "Srta. Maria Eduarda Ferreira",
+    "Rebeca Duarte",
+    "Maria Alice Dias",
+    "Srta. Maria Sophia Fernandes",
+    "Dra. Pietra Santos",
+    "Mirella da Mata",
+    "Emilly Moura",
+]

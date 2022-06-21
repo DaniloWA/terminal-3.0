@@ -21,6 +21,7 @@ export function Comandos(){
         analisarTexto(),
         embaralharTexto(),
         gerarDestino()
+        gerarNomes()
     )
 }
 
