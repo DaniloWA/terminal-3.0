@@ -37,3 +37,7 @@ export function regexGerarDestino() {
     let regExp = /gerar destino/i
     return regExp
     }
+export function regexGerarNomes() {
+    let regExp = /gerar nomes?\s?(masculinos?|femininos?)?\s?(\d+)?/i
+    return regExp
+}
