@@ -9,7 +9,7 @@ import { gerarDestino } from "../gerarDestinos/gerarDestinos.js"
 import { gerarNomes } from "../gerarNomes/gerarNomes.js"
 import { gerarEmail } from "../gerarEmail/gerarEmail.js"
 import { inverterTexto } from "../inverterTexto/invertextTexto.js"
-
+import { gerarNumeroTell } from "../gerarNumeroTell/gerarNumeroTell.js"
 
 export function Comandos(){
     let dados = getInputValue()
@@ -24,7 +24,8 @@ export function Comandos(){
         gerarDestino(),
         gerarNomes(),
         gerarEmail(),
-        inverterTexto()
+        inverterTexto(),
+        gerarNumeroTell()
     )
 }
 
