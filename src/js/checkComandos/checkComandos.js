@@ -8,6 +8,7 @@ import { getInputValue } from "../getDados/getDados.js";
 import { gerarDestino } from "../gerarDestinos/gerarDestinos.js"
 import { gerarNomes } from "../gerarNomes/gerarNomes.js"
 import { gerarEmail } from "../gerarEmail/gerarEmail.js"
+import { inverterTexto } from "../inverterTexto/invertextTexto.js"
 
 
 export function Comandos(){
@@ -22,7 +23,8 @@ export function Comandos(){
         embaralharTexto(),
         gerarDestino(),
         gerarNomes(),
-        gerarEmail()
+        gerarEmail(),
+        inverterTexto()
     )
 }
 
