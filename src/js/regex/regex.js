@@ -61,3 +61,29 @@ export function regexInverterTexto() {
     let regExp = /inverter texto/i
     return regExp
 }
+
+// gerar numeros de telefone
+export function regexGerarNumeroTelefone() {
+    let regExp = /gerar numero\s?/i
+    return regExp
+}
+
+export function numeroPortugues() {
+    let regExp = /gerar numero\s?(portugues|portugal)\s?/i
+    return regExp
+}
+
+export function numeroBraziliero() {
+    let regExp = /gerar numero\s?(brasileiro|brasil)\s?/i
+    return regExp
+}
+
+export function numeroEspanhol() {
+    let regExp = /gerar numero\s?(espanhol|Espanha)\s?/i
+    return regExp
+}
+
+export function regexVirgula(){
+    let regExp1 = /,/ig
+    return regExp1
+}
