@@ -5,7 +5,8 @@ import { random } from "../../random/random.js"
 
 const timeout = async ms => new Promise(res => setTimeout(res, ms));
 
-let jogada = false; 
+let jogando = false
+let jogada = false
 let play = false
 let dica = true
 
@@ -18,6 +19,7 @@ export function jogoCopo(){
    
     if(close_RG().exec(dados) && play == true){
         play = false
+        jogando = false
         jogada = true
         adcElemento('warn','Jogo Finalizado! [Jogo Copo]')
     }
@@ -27,7 +29,6 @@ export function jogoCopo(){
     }   
 
     if(jogosGames().exec(dados) && !jogoCopoRG().exec(dados)){
-
         adcElemento('error','Error: Falta de parametros')
         string = 'Experimenta: jogos list ou games list'
         statusCode = 'info'
@@ -37,14 +38,18 @@ export function jogoCopo(){
 
         return[true, gameStart(dados)] 
 
+    } else if (jogando){
+        string = 'Jogo do Copo em execução! "@close" para fechar o jogo'
+        statusCode = 'info'
+        return [true, adcElemento(statusCode,string)]
     } else {
-
         return false
     }
 
 }
 
 function gameStart(dados){
+    jogando = true
     if(play){
         if(dica){
             adcElemento('info','Bem vindo ao jogo do Copo!')
@@ -107,7 +112,7 @@ async function esperarJogada() {
          closeTime = setTimeout(function(){
             adcElemento('warn','Demorou mais de 1 minuto para jogar. Jogo finalizado! [Jogo Copo]', true)
             jogada = true
-       }, 5000)
+       }, 60000)
 
         while (jogada === false) {
             await timeout(50)
