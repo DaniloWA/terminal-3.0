@@ -12,9 +12,10 @@ let dica = true
 export function jogoCopo(){
     let dados = getInputValue()
     if(dados.length == 0) return false
+
     let string = ''
     let statusCode = 'green'
-
+   
     if(close_RG().exec(dados) && play == true){
         play = false
         jogada = true
@@ -101,12 +102,18 @@ function checkWin(input,copoWin){
 }
 
 async function esperarJogada() {
-    setTimeout(function(){
-        adcElemento('warn','Demorou mais de 1 minuto para jogar. Jogo finalizado! [Jogo Copo]')
-        jogada = true
-   }, 60000)
-    while (jogada === false) {
-        await timeout(50)
-    }; 
+    let closeTime = ''
+    if(jogada == false){
+         closeTime = setTimeout(function(){
+            adcElemento('warn','Demorou mais de 1 minuto para jogar. Jogo finalizado! [Jogo Copo]', true)
+            jogada = true
+       }, 5000)
+
+        while (jogada === false) {
+            await timeout(50)
+        }; 
+    }
+
+    clearTimeout(closeTime)
     jogada = false; 
 }
