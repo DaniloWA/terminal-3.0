@@ -4,6 +4,7 @@ import { adcElemento } from "../../adcElement/adcElement.js"
 import { random } from "../../random/random.js"
 
 const timeout = async ms => new Promise(res => setTimeout(res, ms));
+
 let jogada = false; 
 let play = false
 let dica = true
@@ -11,7 +12,6 @@ let dica = true
 export function jogoCopo(){
     let dados = getInputValue()
     if(dados.length == 0) return false
-
     let string = ''
     let statusCode = 'green'
 

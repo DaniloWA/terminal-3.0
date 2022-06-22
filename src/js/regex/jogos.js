@@ -6,9 +6,8 @@ export function jogosGames() {
     return regExp
 }
 
-
 export function jogoCopoRG() {
-    let regExp = /(games?|jogos?)\s?copo\s?/i
+    let regExp = /(games?|jogos?)\s?(do)?\s?copo\s?/i
     return regExp
 }
 
