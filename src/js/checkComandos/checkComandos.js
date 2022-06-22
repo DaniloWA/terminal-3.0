@@ -10,6 +10,7 @@ import { gerarNomes } from "../gerarNomes/gerarNomes.js"
 import { gerarEmail } from "../gerarEmail/gerarEmail.js"
 import { inverterTexto } from "../inverterTexto/invertextTexto.js"
 import { gerarNumeroTell } from "../gerarNumeroTell/gerarNumeroTell.js"
+import { jogoCopo } from "../jogos/jogoCopo/jogoCopo.js"
 
 export function Comandos(){
     let dados = getInputValue()
@@ -25,7 +26,8 @@ export function Comandos(){
         gerarNomes(),
         gerarEmail(),
         inverterTexto(),
-        gerarNumeroTell()
+        gerarNumeroTell(),
+        jogoCopo(),
     )
 }
 

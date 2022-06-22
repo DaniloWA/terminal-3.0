@@ -15,7 +15,6 @@ export function adcElemento(status,txt,comando){
         statusCode.forEach(stcode => {
             if(stcode == status){
                 linha.className = `row ${status}_text`
-                
             }
         });
         
@@ -32,7 +31,7 @@ export function adcElemento(status,txt,comando){
         linha.className = `row warn_text`   
         linha.appendChild(horaSpan)
         linha.innerHTML += "Perdido ? escreva 'help' no terminal"
-        
+
         return displayDiv.appendChild(linha)
     }
     
