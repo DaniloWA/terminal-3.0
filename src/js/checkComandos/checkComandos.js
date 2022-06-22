@@ -11,8 +11,10 @@ import { gerarEmail } from "../gerarEmail/gerarEmail.js"
 import { inverterTexto } from "../inverterTexto/invertextTexto.js"
 import { gerarNumeroTell } from "../gerarNumeroTell/gerarNumeroTell.js"
 import { jogoCopo } from "../jogos/jogoCopo/jogoCopo.js"
+import { cleanTerminal } from "../clean/clean.js"
 
-export function Comandos(){
+
+export function comandos(){
     let dados = getInputValue()
     if(dados.length == 0) return false
        
@@ -27,7 +29,9 @@ export function Comandos(){
         gerarEmail(),
         inverterTexto(),
         gerarNumeroTell(),
+        cleanTerminal(),
         jogoCopo(),
+
     )
 }
 
