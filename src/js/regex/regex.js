@@ -88,4 +88,8 @@ export function regexVirgula(){
     return regExp1
 }
 
-
+// clean Limpar terminal
+export function cleanTerminalRG() {
+    let regExp = /(clean|cls|clear)/i
+    return regExp
+}
