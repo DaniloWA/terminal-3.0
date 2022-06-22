@@ -26,12 +26,19 @@ export function jogoCopo(){
     }   
 
     if(jogosGames().exec(dados) && !jogoCopoRG().exec(dados)){
+
         adcElemento('error','Error: Falta de parametros')
         string = 'Experimenta: jogos list ou games list'
         statusCode = 'info'
         return [true, adcElemento(statusCode,string)] 
-    } else {
+
+    } else if (jogoCopoRG().exec(dados) || A_RG().exec(dados) ||  B_RG().exec(dados) || C_RG().exec(dados)){
+
         return[true, gameStart(dados)] 
+
+    } else {
+
+        return false
     }
 
 }
