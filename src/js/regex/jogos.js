@@ -1,11 +1,11 @@
 // jogos games 
 export function jogosGames() {
-    let regExp = /(jogos?|games?)\s?/i
+    let regExp = /^(jogos?|games?)\s?/i
     return regExp
 }
 
 export function jogoCopoRG() {
-    let regExp = /(games?|jogos?)\s?(do)?\s?copo\s?/i
+    let regExp = /^(games?|jogos?)\s?(do)?\s?copo\s?/i
     return regExp
 }
 
