@@ -54,9 +54,7 @@ function gameStart(dados){
             adcElemento('info','[A]-[B]-[C] | basta digitar @A - @B - @C')
             adcElemento('warn','"@close" para fechar o jogo! Antes disso o jogo continua rodando por 1 minuto!')
             dica = false
-        } 
-
-        if(!dica){
+        } else{
             adcElemento('info','Jogar novamente ? basta digitar @A - @B - @C')
         }
     
@@ -139,8 +137,8 @@ async function esperarJogada() {
 
     if(jogada == false){
          closeTime = setTimeout(function(){
-            adcElemento('warn','Demorou mais de 1 minuto para jogar. Jogo finalizado! [Jogo Copo]', true)
-            jogada = true
+            adcElemento('warn','Demorou mais de 1 minuto para jogar.', true)
+            closeGame()
        }, 60000)
 
         while (jogada === false) {
