@@ -158,7 +158,7 @@
     font-size: 12px;
   }
 }
-@media screen and (min-width: 0px) and (max-width: 1000px) and (orientation: landscape) {
+@media screen and (min-width: 0px) and (max-width: 900px) and (orientation: landscape) {
   .container {
     background-color: #401386;
     height: 100vh;
