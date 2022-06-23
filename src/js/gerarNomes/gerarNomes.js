@@ -16,17 +16,17 @@ export function gerarNomes(){
 
     if(regexGerarNomes().exec(dados)){
 
-        if(regexGerarNomes().exec(dados)[1]){
+        if(regexGerarNomes().exec(dados)[1]?.includes("masculino") || regexGerarNomes().exec(dados)[1]?.includes("feminino")){
             genero = regexGerarNomes().exec(dados)[1]
+        } else {
+            genero = ''
         }
-        
         if(regexGerarNomes().exec(dados)[2]){
             vezes = +regexGerarNomes().exec(dados)[2]
         }
-
         if( vezes > 20 ){
             
-            string = 'Experimenta: Gerar nomes [genero] [quantidade | Max:20]'
+            string = 'Experimenta: Gerar nomes (genero) (quantidade | Max:20)'
             statusCode = 'info' 
             adcElemento('error','Error: Número máximo excedido! (20)')
 
@@ -34,7 +34,7 @@ export function gerarNomes(){
             if(genero == "masculino" || genero == "masculinos"){
                 if(vezes > 1){
                     for (let index = 0; index < vezes; index++) {
-                        string += ' - ' + nomesFemininos[random(9,0)] 
+                        string += ' - ' + nomesMasculinos[random(9,0)] 
                     }
                 } else {
                     string = nomesMasculinos[random(9,0)] 
@@ -54,8 +54,15 @@ export function gerarNomes(){
             if(regexGerarNomes().exec(dados)[1] == undefined && regexGerarNomes().exec(dados)[2] == undefined ) {
                 string = nomes[random(19,0)] 
             }
-        }
 
+            if(regexGerarNomes().exec(dados)[1] == undefined && regexGerarNomes().exec(dados)[2]) {
+                if(vezes > 1){
+                    for (let index = 0; index < vezes; index++) {
+                        string += ' - ' + nomes[random(19,0)]
+                    }
+                } 
+            }
+        }
         return [true, adcElemento(statusCode,string)]
 
     } else {
