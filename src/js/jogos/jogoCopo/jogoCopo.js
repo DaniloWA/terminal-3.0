@@ -16,36 +16,33 @@ export function jogoCopo(){
 
     let string = ''
     let statusCode = 'green'
-   
+
     if(close_RG().exec(dados) && play == true){
-        play = false
-        jogando = false
-        jogada = true
-        adcElemento('warn','Jogo Finalizado! [Jogo Copo]')
+        return [true, closeGame()]   
     }
 
     if(jogoCopoRG().exec(dados)){
         play = true
     }   
-
+    
     if(jogosGames().exec(dados) && !jogoCopoRG().exec(dados)){
         adcElemento('error','Error: Falta de parametros')
         string = 'Experimenta: jogos list ou games list'
         statusCode = 'info'
         return [true, adcElemento(statusCode,string)] 
+    }
 
-    } else if (jogoCopoRG().exec(dados) || A_RG().exec(dados) ||  B_RG().exec(dados) || C_RG().exec(dados)){
-
+    if (jogoCopoRG().exec(dados) || A_RG().exec(dados) ||  B_RG().exec(dados) || C_RG().exec(dados) && jogando){
         return[true, gameStart(dados)] 
-
-    } else if (jogando){
+    }
+    
+    if (jogando){
         string = 'Jogo do Copo em execução! "@close" para fechar o jogo'
         statusCode = 'info'
         return [true, adcElemento(statusCode,string)]
-    } else {
-        return false
-    }
-
+    } 
+    
+    return false
 }
 
 function gameStart(dados){
@@ -57,7 +54,9 @@ function gameStart(dados){
             adcElemento('info','[A]-[B]-[C] | basta digitar @A - @B - @C')
             adcElemento('warn','"@close" para fechar o jogo! Antes disso o jogo continua rodando por 1 minuto!')
             dica = false
-        } else {
+        } 
+
+        if(!dica){
             adcElemento('info','Jogar novamente ? basta digitar @A - @B - @C')
         }
     
