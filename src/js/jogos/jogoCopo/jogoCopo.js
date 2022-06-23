@@ -67,25 +67,25 @@ function gameStart(dados){
     
         if(A_RG().exec(dados)){
             if(checkWin("A", win)){
-                return adcElemento('green','Parabéns você venceu!!! A WIN')
-            }else{
-                return adcElemento('green',`Derrota. Jogador: A. Certa: ${win}`)
+                return returnWinLose(dados,win,true)
+            } else {
+                return returnWinLose(dados,win,false)
             }
         }
     
         if(B_RG().exec(dados)){
             if(checkWin("B", win)){
-                return adcElemento('green','Parabéns você venceu!!! B WIN')
-            }else{
-                return adcElemento('green',`Derrota. Jogador: B. Certa: ${win}`)
+                return returnWinLose(dados,win,true)
+            } else {
+                return returnWinLose(dados,win,false)
             }
         }
     
         if(C_RG().exec(dados)){
             if(checkWin("c", win)){
-                return adcElemento('green','Parabéns você venceu!!! C WIN')
-            }else{
-                return adcElemento('green',`Derrota. Jogador: C. Certa: ${win}`)
+                return returnWinLose(dados,win,true)
+            } else {
+                return returnWinLose(dados,win,false)
             }
         }
     }
@@ -106,8 +106,38 @@ function checkWin(input,copoWin){
     }
 }
 
+function returnWinLose(input,copo,win){
+    const jogadas = ['A','B','C']
+    let copoInput = ''
+
+    jogadas.forEach(jogada => {
+        console.log(input[1].toUpperCase())
+        jogada == input[1].toUpperCase() ? copoInput = jogada : ''
+
+    });
+
+    if(win){
+        adcElemento('win','Parabéns você venceu!!!')
+        adcElemento('green',`Jogador: ${copoInput}. Certa: ${copo}`)
+    }
+
+    if(!win){
+        adcElemento('lose','Derrota... Você perdeu!!!')
+        adcElemento('green',`Jogador: ${copoInput}. Certa: ${copo}`)
+    }
+}
+
+function closeGame(){
+    play = false
+    jogando = false
+    jogada = true
+    dica = true
+    return adcElemento('warn','Jogo Finalizado! [Jogo Copo]')
+}
+
 async function esperarJogada() {
     let closeTime = ''
+
     if(jogada == false){
          closeTime = setTimeout(function(){
             adcElemento('warn','Demorou mais de 1 minuto para jogar. Jogo finalizado! [Jogo Copo]', true)

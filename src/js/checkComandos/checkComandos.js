@@ -31,7 +31,6 @@ export function comandos(){
         gerarNumeroTell(),
         cleanTerminal(),
         jogoCopo(),
-
     )
 }
 

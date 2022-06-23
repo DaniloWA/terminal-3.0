@@ -1,5 +1,3 @@
-
-
 // jogos games 
 export function jogosGames() {
     let regExp = /(jogos?|games?)\s?/i
