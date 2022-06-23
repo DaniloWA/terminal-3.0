@@ -29,3 +29,12 @@
     font-size: 15px;
 }
 
+.win_text{
+    color: $text_terminal_color;
+    background-color: $bg_text_win_color;
+}
+
+.lose_text{
+    color: $text_error_color;
+    background-color: $bg_text_lose_color;
+}

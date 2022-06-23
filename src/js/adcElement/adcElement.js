@@ -6,7 +6,7 @@ export function adcElemento(status,txt,comando){
 
     let linha = document.createElement("p")
     let horaSpan = document.createElement("span")
-    let statusCode = ['info','user','green','error','warn']
+    let statusCode = ['lose','win','info','user','green','error','warn']
 
     if(!dados.length == 0 || comando){
         horaSpan.className = 'time_text' 

@@ -31,6 +31,16 @@
   font-size: 15px;
 }
 
+.win_text {
+  color: #098D09;
+  background-color: rgba(0, 128, 0, 0.291);
+}
+
+.lose_text {
+  color: #ce0606;
+  background-color: rgba(42, 0, 0, 0.5568627451);
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
