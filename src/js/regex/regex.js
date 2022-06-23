@@ -90,6 +90,6 @@ export function regexVirgula(){
 
 // clean Limpar terminal
 export function cleanTerminalRG() {
-    let regExp = /(clean|cls|clear)/i
+    let regExp = /^(clean|cls|clear)/i
     return regExp
 }
