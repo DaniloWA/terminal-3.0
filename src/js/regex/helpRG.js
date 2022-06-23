@@ -93,7 +93,7 @@ export function checkRegex(dados){
         return 'Escreva "Gerar email" e ira retornar um email aleatorio'
 
     if(rgHelpNomes().exec(dados))
-        return 'Escreva "Gerar nomes (masculino/feminino) " ira retornar um nome aleatorio'
+        return 'Escreva "Gerar nomes (masculino/feminino) (quantidade) " ira retornar um nome aleatorio'
 
     if(rgHelpNumeros().exec(dados))
         return 'Escreva "gerar numero (brasilero|brasil) ou (espanhol|espanha) ou (portugues|portugal)_" e ira retornar um numero aleatorio'
