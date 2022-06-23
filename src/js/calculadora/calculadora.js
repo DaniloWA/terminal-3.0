@@ -50,13 +50,12 @@ export function respostaCalculos(){
     let dados = getInputValue()
     if(dados.length == 0) return false
 
-    let dadosCalculadorRG = calculadoraRG()
     let respostaFinal = ''
 
-   if(dadosCalculadorRG.exec(dados)){
-        let num1 = dadosCalculadorRG.exec(dados)[1]
-        let num2 = dadosCalculadorRG.exec(dados)[3]
-        let operadore = dadosCalculadorRG.exec(dados)[2]
+   if(calculadoraRG().exec(dados)){
+        let num1 = calculadoraRG().exec(dados)[1]
+        let num2 = calculadoraRG().exec(dados)[3]
+        let operadore = calculadoraRG().exec(dados)[2]
 
         respostaFinal = calculos(num1,num2,operadoresIA(operadore))
 
