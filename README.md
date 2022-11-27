@@ -16,19 +16,19 @@ Atualmente com 13 funções e um jogo em desenvolvimento.
 
 # Funções 
 
-### [Analisador de Texto](#analisador-de-Texto)
+### [Analisador de Textos](#analisador-de-Texto)
 
-### [Calculadora](#calculadora)
+### [Calculadora simples](#calculadora)
 
-### [Embaralhar](#embaralhar)
+### [Embaralhar texto](#embaralhar)
 
-### [Destinos](#destinos)
+### [Gerador de Destinos](#destinos)
 
-### [Gerador de Emails](#gerador-de-emails)
+### [Gerador de Email](#gerador-de-emails)
 
 ### [Gerador de números de celular](#gerador-de-numeros-de-telefone)
 
-### [Gerador de senhas](#gerador-de-senhas)
+### [Gerador de senha](#gerador-de-senhas)
 
 ### [Inverter](#inverter-texto)
 
