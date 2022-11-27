@@ -62,7 +62,7 @@ Atualmente com 13 funções e um jogo em desenvolvimento.
 ```
 ### Faz uma contagem de palavras e Letras do seu texto.
 
-![Analisar de texto](/img/analisador_texto.png)
+![Analisar de texto](/img/Analisador_texto.png)
 
 ---
 <br>
