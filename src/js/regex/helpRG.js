@@ -39,7 +39,7 @@
 }
 
  function rgHelpNumeros(){
-    let regExp = /^Help numeros'/i
+    let regExp = /^Help numeros/i
     return regExp
 }
 
@@ -96,7 +96,7 @@ export function checkRegex(dados){
         return 'Escreva "Gerar nomes (masculino/feminino) (quantidade) " ira retornar um nome aleatorio'
 
     if(rgHelpNumeros().exec(dados))
-        return 'Escreva "gerar numero (brasilero|brasil) ou (espanhol|espanha) ou (portugues|portugal)_" e ira retornar um numero aleatorio'
+        return 'Escreva "gerar numero (brasileiro|brasil) ou (espanhol|espanha) ou (portugues|portugal)_" e ira retornar um numero aleatorio'
 
     if(rgHelpSenha().exec(dados))
         return 'Escreva "Gerar senha [numero de digitos] (com ou sem)" e ira gerar uma senha aleatoria com ou sem caracteres especiais'
