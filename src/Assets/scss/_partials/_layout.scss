@@ -75,8 +75,13 @@
                 width: 30px;
             }
           }
-    }
 
+    }
+    .fork{
+        position: absolute;
+        right: 0px; 
+    }
+    
     footer{
         grid-area: footer;
         justify-self: center;
@@ -84,7 +89,6 @@
         color: $text_footer_color;
     }
 }
-
 @media only screen and (max-width: 1200px){
     .container{
         .terminal{
@@ -149,3 +153,4 @@
     }
   }
  
+

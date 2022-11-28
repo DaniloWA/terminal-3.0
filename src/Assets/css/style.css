@@ -118,6 +118,10 @@
 .container .terminal #display ::-webkit-scrollbar {
   width: 30px;
 }
+.container .fork {
+  position: absolute;
+  right: 0px;
+}
 .container footer {
   grid-area: footer;
   justify-self: center;
@@ -153,7 +157,6 @@
   .container .terminal #display p {
     margin-bottom: 10px;
   }
-
   .row {
     font-size: 12px;
   }
@@ -174,7 +177,6 @@
   .container .terminal #display p {
     margin-bottom: 10px;
   }
-
   .row {
     font-size: 12px;
   }
