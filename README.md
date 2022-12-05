@@ -4,6 +4,7 @@ Um terminal programado em javascript vanilla e Regex.
 
 Atualmente com 13 funções e um jogo em desenvolvimento.
 
+# [Live Demo](https://terminal.daniloo.dev/) - Teste a aplicação.
 <br>
 
 ![Terminal](/img/Terminal.png)
